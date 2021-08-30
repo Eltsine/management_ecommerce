@@ -4,15 +4,24 @@
       <h2 class="mb-0">
         <button class="btn btn-link btn-block text-left p-0" type="button" data-toggle="collapse"
                 [attr.data-target]="'#collapseOne'+ menu.id" aria-expanded="true" aria-controls="collapseOne">
+          <i class="{{menu.icon}}"></i>&nbsp;
           {{menu.titre}}
         </button>
       </h2>
     </div>
 
     <div id="collapseOne{{menu.id}}" class="collapse show" [attr.aria-labelledby]="'#menu' + menu.id"
-         data-parent="#accordionExample"
-    *ngFor="let sousMenu of menu.sousMenu">
-      {{sousMenu.titre}}
+         data-parent="#accordionExample">
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let sousMenu of menu.sousMenu">
+            <a href="javascript: void(o)" (click)="navigate(sousMenu.url)">
+              <i class="{{sousMenu.icon}}"></i>
+              {{sousMenu.titre}}
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

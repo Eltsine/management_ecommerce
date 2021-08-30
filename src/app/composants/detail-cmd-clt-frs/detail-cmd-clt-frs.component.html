@@ -1,0 +1,101 @@
+<div class="row mb-1 mt-1 mr-0 custom-border">
+  <div class="col-md-1 custom-border-right p-1 text-center">
+    <img src="assets/product.png" width="90px" height="90px">
+  </div>
+  <!--Details articles-->
+  <div class="col-md-5 custom-border-right mb-1 mt-1">
+    <div class="col">
+      <div class="row">
+        <div class="md-2"><i class="fas fa-info-circle blue-color"></i></div>
+        <div >Nom</div>
+      </div>
+
+      <div class="row">
+        <div class="mr-2"><i class="fas fa-info-circle blue-color"></i></div>
+        <div>Prenom</div>
+      </div>
+
+      <div class="row">
+        <div class="mr-2"><i class="fas fa-dollar-sign blue-color"></i></div>
+        <div>011 22 33 44 55</div>
+      </div>
+
+    </div>
+  </div>
+  <!--Details commande-->
+  <div class="col-md-3 custom-border-right mb-1 mt-1">
+    <div class="col">
+        <div class="row">
+          <div class="mr-2"><i class="fas fa-qrcode blue-color"></i></div>
+          <div>CMD-123456789</div>
+        </div>
+      <div class="row">
+        <div class="mr-2"><i class="fas fa-calendar-check blue-color"></i></div>
+        <div>12.12.2012</div>
+      </div>
+
+      <div class="row">
+        <div class="mr-2"><i class="fas fa-cart-arrow-down blue-color"></i></div>
+        <div>LIVREE</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--Boutons actions-->
+  <div class="col-md-3 m-0 custom-border-right mb-1 mt-1">
+    <div class="row mr-2">
+      <div class="col-md-12 p-0">
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+          <i class="fas fa-pencil-alt blue-color"></i>&nbsp; Modifier
+        </button>
+      </div>
+
+      <div class="col-md-12 p-0">
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+          <i class="fab fa-stack-overflow"></i>&nbsp; Supprimer
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Correction de Stock</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Quantite">
+          </div>
+          <div class="form-group">
+            <select class="form-control">
+              <option>Correction Positive</option>
+              <option>Correction Negative</option>
+
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="cancelClick()" class="btn btn-danger mr-3" data-dismiss="modal">
+          <i class="fas fa-ban"></i>&nbsp;
+          Annuler
+        </button>
+        <button type="button" (click)="saveClick()" class="btn btn-primary">
+          <i class="fas fa-save"></i>&nbsp;
+          Enregistrer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
