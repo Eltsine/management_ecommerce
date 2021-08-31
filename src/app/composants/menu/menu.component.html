@@ -14,8 +14,10 @@
          data-parent="#accordionExample">
       <div class="card">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item" *ngFor="let sousMenu of menu.sousMenu">
-            <a href="javascript: void(o)" (click)="navigate(sousMenu.url)">
+          <li class="list-group-item" *ngFor="let sousMenu of menu.sousMenu"
+              [ngClass]="{'bg-warning text-white' :sousMenu.active,'': !sousMenu.active}">
+                        <a href="javascript: void(o)" (click)="navigate(sousMenu)">
+            <!--            <a href="javascript: void(o)" (click)="navigate(sousMenu.url)">-->
               <i class="{{sousMenu.icon}}"></i>
               {{sousMenu.titre}}
             </a>

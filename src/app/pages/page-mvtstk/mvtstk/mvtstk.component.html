@@ -1,11 +1,15 @@
 <div class="col">
-  <div class="row m-3">
+  <div class="row m-3 mt-3">
     <div class="col-md-8 p-0">
       <h2>Mouvement du Stock</h2>
     </div>
     <div class="col-md-4 text-right">
 
-      <app-bouton-action></app-bouton-action>
+      <app-bouton-action
+        [isImporterVisible]="false"
+        [isNouveauVisible]="false"
+
+      ></app-bouton-action>
     </div>
   </div>
 

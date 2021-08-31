@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Menu} from './menu';
 import {Router} from '@angular/router';
-
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -112,6 +111,7 @@ export class MenuComponent implements OnInit {
     },
 ];
 
+  private lastSelectedMenu: Menu | undefined;
   constructor(
     private router: Router
   ) { }
@@ -119,8 +119,19 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigate(url?: string): void{
-    this.router.navigate([url]);
+  navigate(menu: Menu): void{
+    if (this.lastSelectedMenu){
+      this.lastSelectedMenu.active = false;
+
+    }
+    menu.active = true;
+    this.lastSelectedMenu = menu;
+    this.router.navigate([menu.url]);
 
   }
+
+  // navigate(url?: string): void{
+  //   this.router.navigate([url]);
+  //
+  // }
 }

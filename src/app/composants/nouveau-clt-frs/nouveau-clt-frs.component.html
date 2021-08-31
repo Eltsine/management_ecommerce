@@ -1,11 +1,11 @@
 <div class="col mb-3">
-  <div class="col-md-12 mb-3">
+  <div class="col-md-12 mb-3 mt-3">
     <img src="../../../../assets/product.png" class="rounded-circle" width="200px" height="200px">
   </div>
 
   <div class="col-md-12 mb-3">
     <div class="col-md">
-      <h2><i class="fas fa-info-circle blue-color"></i>&nbsp; Information du client/fournisseurs</h2>
+      <h2><i class="fas fa-info-circle blue-color"></i>&nbsp; Information du {{origin}}</h2>
     </div>
 
     <div class="col-md-12">
@@ -61,11 +61,11 @@
   </div>
 
   <div class="col-md-12 text-right">
-    <button type="button" class="btn btn-danger mr-3">
+    <button type="button" class="btn btn-danger mr-3" (click)="cancelClick()">
       <i class="fa fa-info-circle white-color"></i>&nbsp;
       Annuler
     </button>
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-primary" (click)="saveClick()">
       <i class="fas fa-save"></i>&nbsp;
       Enregistrer
     </button>
